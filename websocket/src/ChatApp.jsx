@@ -26,7 +26,7 @@ const ChatApp = () => {
   // Initialize WebSocket connection
   const connectToServer = () => {
     try {
-      const ws = new WebSocket('ws://localhost:7070');
+      const ws = new WebSocket('wss://chatapp-l37m.onrender.com');
       
       ws.onopen = () => {
         setSocket(ws);
