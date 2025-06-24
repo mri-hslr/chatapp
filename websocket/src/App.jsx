@@ -8,7 +8,7 @@ export default function App() {
   const wss=useRef()
   const [messages,setMessage]=useState([]);
   useEffect(()=>{
-    const ws=new WebSocket('ws://localhost:7070')
+    const ws=new WebSocket('wss://chatapp-l37m.onrender.com')
     wss.current=ws;
     ws.onmessage=(e)=>{
       setMessage((messages)=>[...messages,e.data])
